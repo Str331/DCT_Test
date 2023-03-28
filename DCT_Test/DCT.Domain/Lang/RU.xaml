@@ -1,0 +1,29 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+
+    <system:String x:Key="file">Файл</system:String>
+    <system:String x:Key="theme">Тема</system:String>
+    <system:String x:Key="lang">Язык</system:String>
+    <system:String x:Key="exit">Выход</system:String>
+    <system:String x:Key="main">Главная</system:String>
+    <system:String x:Key="details">Детали</system:String>
+    <system:String x:Key="charts">Графики</system:String>
+    <system:String x:Key="converter">Конвертер</system:String>
+    <system:String x:Key="rank">Популярность</system:String>
+    <system:String x:Key="name">Название</system:String>
+    <system:String x:Key="symbol">Символ</system:String>
+    <system:String x:Key="price">Цена $</system:String>
+    <system:String x:Key="show">Показать</system:String>
+    <system:String x:Key="marketCap">Рыночная капитализация</system:String>
+    <system:String x:Key="supply">Доступно</system:String>
+    <system:String x:Key="change">Изменения %</system:String>
+    <system:String x:Key="market">Название магазина</system:String>
+    <system:String x:Key="volume">Обьем %</system:String>
+    <system:String x:Key="plot">Отобразить</system:String>
+    <system:String x:Key="convert">Конвертировать</system:String>
+    <system:String x:Key="sell">Продажа</system:String>
+    <system:String x:Key="get">Вы получаете</system:String>
+    <system:String x:Key="dark">Темная тема</system:String>
+    <system:String x:Key="light">Светлая тема</system:String>
+</ResourceDictionary>
