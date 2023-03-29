@@ -12,15 +12,15 @@ namespace DCT_Test.Model
 
         public string Name { get; set; }
 
-        public double? Price { get; set; }
+        public double? PriceUsd { get; set; }
 
         public string Explore { get; set; }
 
         public double? Vwap { get; set; }
 
-        public int Place { get; set; }
+        public int Rank { get; set; }
 
-        public string Symb { get; set; }
+        public string Symbol { get; set; }
 
         public string Feed { get; set; }
 

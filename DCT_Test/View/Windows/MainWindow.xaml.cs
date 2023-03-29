@@ -48,26 +48,26 @@ namespace DCT_Test.View.Windows
         {
             SwitchStyle("Dark");
         }
-        private void SwitchLanguage(string Code)
+        private void SwitchLanguage(string languageCode)
         {
-            ResourceDictionary resource = new ResourceDictionary();
-            switch (Code)
+            ResourceDictionary dictionary = new ResourceDictionary();
+            switch (languageCode)
             {
                 case "en":
-                    resource.Source = new Uri("..\\Lang/ENG.xaml", UriKind.Relative);
+                    dictionary.Source = new Uri("..\\DCT.Domain/Lang/EN.xaml", UriKind.Relative);
                     break;
                 case "ua":
-                    resource.Source = new Uri("..\\Lang/UA.xaml", UriKind.Relative);
+                    dictionary.Source = new Uri("..\\DCT.Domain/Lang/UA.xaml", UriKind.Relative);
                     break;
                 case "ru":
-                    resource.Source = new Uri("..\\Lang/RU.xaml", UriKind.Relative);
+                    dictionary.Source = new Uri("..\\DCT.Domain/Lang/RU.xaml", UriKind.Relative);
                     break;
                 default:
-                    resource.Source = new Uri("..\\Lang/ENG.xaml", UriKind.Relative);
+                    dictionary.Source = new Uri("..\\DCT.Domain/Lang/EN.xaml", UriKind.Relative);
                     break;
             }
 
-            this.Resources.MergedDictionaries.Add(resource);
+            this.Resources.MergedDictionaries.Add(dictionary);
         }
 
         private void SwitchStyle(string styleName)
@@ -76,13 +76,13 @@ namespace DCT_Test.View.Windows
             switch (styleName)
             {
                 case "Dark":
-                    dictionary.Source = new Uri("..\\Themes/DarkTheme.xaml", UriKind.Relative);
+                    dictionary.Source = new Uri("..\\DCT.Domain/Theme/Dark.xaml", UriKind.Relative);
                     break;
                 case "Light":
-                    dictionary.Source = new Uri("..\\Themes/LightTheme.xaml", UriKind.Relative);
+                    dictionary.Source = new Uri("..\\DCT.Domain/Theme/Light.xaml", UriKind.Relative);
                     break;
                 default:
-                    dictionary.Source = new Uri("..\\Theme/LightTheme.xaml", UriKind.Relative);
+                    dictionary.Source = new Uri("..\\DCT.Domain/Theme/Light.xaml", UriKind.Relative);
                     break;
             }
             this.Resources.MergedDictionaries.Add(dictionary);

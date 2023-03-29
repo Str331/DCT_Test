@@ -8,7 +8,7 @@
     <SolidColorBrush x:Key="DataGrid.BorderBrush" Color="#111539" />
     <SolidColorBrush x:Key="ComboBox.Background" Color="#D2D7FF" />
     <SolidColorBrush x:Key="ComboBox.Inactive.Background" Color="#111539" />
-    <SolidColorBrush x:Key="ColumnHeader.Background" Color="#3C46A1" />
+    <SolidColorBrush x:Key="ColumnHeader.Background" Color="#A52A2A" />
 
     <SolidColorBrush x:Key="ColumnHeader.BorderBrush" Color="#111539" />
 

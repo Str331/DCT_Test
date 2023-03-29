@@ -12,11 +12,12 @@ using DCT_Test.Model;
 
 namespace DCT_Test.DCT.Services.Services
 {
-    public class GetReq:IGetReq
+    public class GetReq
     {
-        public string Get(string URL, List<TryFind> ParamList = null)
+        protected string Get(string URL, List<TryFind> ParamList = null)
         {
-            URL = "https://api.coincap.io/v2/";
+            string BaseURL = "https://api.coincap.io/v2/";
+            URL = BaseURL + URL;
             var client = new RestClient(URL);
             client.Timeout = -1;
             var request = new RestRequest(Method.GET);

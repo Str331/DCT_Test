@@ -76,20 +76,20 @@ namespace DCT_Test.ViewModel
             }
         }
 
-        private ObservableCollection<Trade> _Trade;
-        public ObservableCollection<Trade> Trade
+        private ObservableCollection<Trade> _Markets;
+        public ObservableCollection<Trade> Markets
         {
-            get => _Trade;
+            get => _Markets;
             set
             {
-                _Trade = value;
-                OnPropChanged(nameof(Trade));
+                _Markets = value;
+                OnPropChanged(nameof(Markets));
             }
         }
 
-        public ObservableCollection<Resource> MainResouces { get; }
+        public ObservableCollection<Resource> BestAssets { get; }
         public ObservableCollection<Resource> Currencies { get; }
-        public ObservableCollection<Periods> Periods { get; private set; } = null;
+        public ObservableCollection<Periods> Points { get; private set; } = null;
         #endregion
         #region Commands
         public ICommand ConvertCurrencyCommand { get; }
@@ -132,13 +132,13 @@ namespace DCT_Test.ViewModel
         private void OnDrawChartCommandExecuted(object p)
         {
             ObservableCollection<Points> unixPoints = requests.GetPoints(PlotCurrency.Id, "d1");
-            Periods = new ObservableCollection<Periods>();
+            Points = new ObservableCollection<Periods>();
             foreach (var up in unixPoints)
             {
                 DateTime start = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
                 DateTime date = start.AddMilliseconds(up.Period).ToLocalTime();
 
-                Periods.Add(new Periods { Price = up.Price, Date = date });
+                Points.Add(new Periods { Price = up.Price, Date = date });
             }
             OnPropChanged("Points");
         }
@@ -165,7 +165,7 @@ namespace DCT_Test.ViewModel
                     Value = 2000
                 }
             };
-            Trade = requests.GetTradeData(Details.Id, parametersAllMarkets);
+            Markets = requests.GetTradeData(Details.Id, parametersAllMarkets);
 
         }
         #endregion
@@ -186,10 +186,10 @@ namespace DCT_Test.ViewModel
                 }
             };
             Currencies = requests.GetByResources(parametersAllAssets);
-            MainResouces = new ObservableCollection<Resource>();
+            BestAssets = new ObservableCollection<Resource>();
             for (int i = 0; i < 10; i++)
             {
-                MainResouces.Add(Currencies[i]);
+                BestAssets.Add(Currencies[i]);
             }
         }
     }
